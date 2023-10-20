@@ -2,7 +2,7 @@
 # Добавил тесты с GUI + Cucumber + allure
 # Проверяем сайт https://edujira.ifellow.ru/ 
 
-### Запуск тестов через терминал: <mvn clean test>
+### Запуск тестов через терминал: mvn clean test
 
 ## Файл src/main/java/util/Config.java
 - Реализована конфигурация системы на использование файла src/test/resources/application.properties
