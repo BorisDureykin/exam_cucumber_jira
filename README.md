@@ -1,5 +1,6 @@
 # Экзаменационное задание Cucumber, maven, Rest Assured, allure
 # Добавил тесты с GUI + Cucumber + allure
+# Проверяем сайт https://edujira.ifellow.ru/ 
 
 ## Файл src/main/java/util/Config.java
 - Реализована конфигурация системы на использование файла src/test/resources/application.properties
