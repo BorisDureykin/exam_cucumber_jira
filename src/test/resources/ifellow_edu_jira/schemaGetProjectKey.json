@@ -1,0 +1,246 @@
+{
+  "id": "https://docs.atlassian.com/jira/REST/schema/project#",
+  "title": "Project",
+  "type": "object",
+  "properties": {
+    "expand": {
+      "type": "string"
+    },
+    "self": {
+      "type": "string",
+      "format": "uri"
+    },
+    "id": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "lead": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string",
+          "format": "uri"
+        },
+        "key": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "avatarUrls": {
+          "type": "object",
+          "properties": {
+            "48x48": {
+              "type": "string",
+              "format": "uri"
+            },
+            "24x24": {
+              "type": "string",
+              "format": "uri"
+            },
+            "16x16": {
+              "type": "string",
+              "format": "uri"
+            },
+            "32x32": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "required": ["48x48", "24x24", "16x16", "32x32"]
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "active": {
+          "type": "boolean"
+        }
+      },
+      "required": ["self", "key", "name", "avatarUrls", "displayName", "active"]
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "issueTypes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "self": {
+            "type": "string",
+            "format": "uri"
+          },
+          "id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "iconUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "name": {
+            "type": "string"
+          },
+          "subtask": {
+            "type": "boolean"
+          },
+          "avatarId": {
+            "type": "integer"
+          },
+          "releaseDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "required": ["self", "id", "name", "subtask"],
+        "additionalProperties": false
+      }
+    },
+    "assigneeType": {
+      "type": "string",
+      "enum": ["UNASSIGNED"]
+    },
+    "versions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "self": {
+            "type": "string",
+            "format": "uri"
+          },
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "archived": {
+            "type": "boolean"
+          },
+          "released": {
+            "type": "boolean"
+          },
+          "overdue": {
+            "type": "boolean"
+          },
+          "userStartDate": {
+            "type": "string"
+          },
+          "userReleaseDate": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "integer"
+          },
+          "moveUnfixedIssuesTo": {
+            "type": "string",
+            "format": "uri"
+          },
+          "operations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "styleClass": {
+                  "type": "string"
+                },
+                "iconClass": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "href": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "weight": {
+                  "type": "integer"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "remotelinks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "link": {}
+              },
+              "additionalProperties": false
+            }
+          },
+          "releaseDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "name": {
+      "type": "string"
+    },
+    "roles": {
+      "type": "object",
+      "patternProperties": {
+        ".+": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "additionalProperties": false
+    },
+    "avatarUrls": {
+      "type": "object",
+      "patternProperties": {
+        ".+": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "additionalProperties": false
+    },
+    "projectTypeKey": {
+      "type": "string"
+    },
+    "archived": {
+      "type": "boolean"
+    }
+  },
+  "required": ["expand", "self", "id", "key", "lead", "components", "issueTypes", "assigneeType", "versions", "name", "roles", "avatarUrls", "projectTypeKey", "archived"],
+  "additionalProperties": false
+}

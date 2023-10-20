@@ -1,0 +1,19 @@
+[
+  {
+    "transitionStatusId": "41",
+    "transitionStatusName": "В работе"
+  },
+  {
+    "transitionStatusId": "21",
+    "transitionStatusName": "В работе"
+  },
+  {
+    "transitionStatusId": "51",
+    "transitionStatusName": "Решенные"
+  },
+  {
+    "transitionStatusId": "31",
+    "transitionStatusName": "Готово"
+  }
+]
+

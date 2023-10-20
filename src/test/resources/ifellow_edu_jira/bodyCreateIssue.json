@@ -1,0 +1,20 @@
+{
+  "update": {},
+  "fields": {
+    "project": {
+      "id": "10000"
+    },
+    "summary": "Create Issue student AT14 Api Rest Cucumber",
+    "issuetype": {
+      "id": "10102"
+    },
+    "priority": {
+      "id": "1"
+    },
+    "labels": [
+      "tratata",
+      "katofff"
+    ],
+    "description": "AT_WORKING"
+  }
+}

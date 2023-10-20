@@ -1,0 +1,28 @@
+{
+  "id": "https://docs.atlassian.com/jira/REST/schema/list-of-resolution#",
+  "title": "List of Resolution",
+  "type": "array",
+  "items": {
+    "title": "Resolution",
+    "type": "object",
+    "properties": {
+      "self": {
+        "type": "string",
+        "format": "uri"
+      },
+      "description": {
+        "type": "string"
+      },
+      "iconUrl": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "id": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": false
+  }
+}

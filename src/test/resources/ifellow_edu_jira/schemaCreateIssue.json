@@ -1,0 +1,17 @@
+{
+  "id": "https://docs.atlassian.com/jira/REST/schema/issue-create-response#",
+  "title": "Issue Create Response",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    },
+    "self": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

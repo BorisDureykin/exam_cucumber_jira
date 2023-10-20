@@ -1,0 +1,40 @@
+{
+  "id": "https://docs.atlassian.com/jira/REST/schema/auth-success#",
+  "title": "Auth Success",
+  "type": "object",
+  "properties": {
+    "session": {
+      "title": "Session Info",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "loginInfo": {
+      "title": "Login Info",
+      "type": "object",
+      "properties": {
+        "failedLoginCount": {
+          "type": "integer"
+        },
+        "loginCount": {
+          "type": "integer"
+        },
+        "lastFailedLoginTime": {
+          "type": "string"
+        },
+        "previousLoginTime": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
