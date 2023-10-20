@@ -42,6 +42,6 @@ public class SearchIssue extends EdujiraIfellowRuSecureDashboard {
 
         assertEqualUtil(issuesStatus, actualStatus, "Не верный статус задачи");
 
-        saveScreenshot("Сверяем статус задачи, ожидаемое значение: "+issuesStatus);
+        saveScreenshot("Сверяем статус задачи, ожидаемое значение: " + issuesStatus);
     }
 }

@@ -9,7 +9,6 @@ public class EdujiraIfellowRuLogin {
 
     public static SelenideElement bodyPage = $x("//body");
 
-
     public static SelenideElement inputLogin = $x("//input[@id='login-form-username' and @name='os_username']");
 
     public static SelenideElement inputPassword = $x("//input[@id='login-form-password' and @name='os_password']");

@@ -14,7 +14,7 @@ public class TaskTransitionByStatuses extends EdujiraIfellowRuSecureDashboard {
     @И("Переводим созданную задачу по статусам GUI")
     public static void taskTransitionByStatuses() {
 
-        String  url = getConfigValue("issueUrl") + CreateIssue.issueKey;
+        String url = getConfigValue("issueUrl") + CreateIssue.issueKey;
         open(url);
 
         buttonCheckVisibilityClick(inWorkButton, "В работе");

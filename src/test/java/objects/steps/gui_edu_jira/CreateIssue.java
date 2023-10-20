@@ -39,12 +39,12 @@ public class CreateIssue extends EdujiraIfellowRuSecureDashboard {
         buttonCheckVisibilityClick(assignMeButton, "Назначить меня");
         buttonCheckVisibilityClick(createIssueButton, "Create Issues Button");
 
-        if (inputTopic.isEmpty()){
+        if (inputTopic.isEmpty()) {
             assertTrueVisible(summaryDescriptionError, "Не отображаестя предупреждение.");
             assertTrueContains("Вы должны определить тему по запросу.", summaryDescriptionError.getOwnText(), "Сообщение не верно.");
             saveScreenshot("Проверка ошибки создания задачи и вывод сообщения об ошибке: 'Вы должны определить тему по запросу.'");
 
-        }else {
+        } else {
             assertTrueVisible(returnIssueKey, "Не отображаестя сообщение об успешном создании задачи.");
             String newIssueKey = returnIssueKey.shouldBe(Condition.visible).getOwnText();
             String target = " - " + inputTopic;

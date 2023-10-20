@@ -33,7 +33,7 @@ public class GoToProjectAntCountIssues extends EdujiraIfellowRuSecureDashboard {
 
         newCountIssuesGui = countIssues.getOwnText().replace("1 из ", "");
 
-        assertNotNullUtil(newCountIssuesGui,  "Нет значения в количестве задач.");
+        assertNotNullUtil(newCountIssuesGui, "Нет значения в количестве задач.");
 
         saveScreenshot("Получение количества задач в проекте: " + nameCoToProject);
     }
@@ -41,7 +41,7 @@ public class GoToProjectAntCountIssues extends EdujiraIfellowRuSecureDashboard {
     @Тогда("Сравниваем количество задач в проекте {string} полученное по API и отображаемое на экране")
     public static void comparingCountIssues(String nameCoToProject) {
 
-        assertEqualUtil(countIssueApi, newCountIssuesGui, "Количество задач в проекте: "+ nameCoToProject +"Составляет: "+ countIssueApi+", Отображается : "+ newCountIssuesGui);
+        assertEqualUtil(countIssueApi, newCountIssuesGui, "Количество задач в проекте: " + nameCoToProject + "Составляет: " + countIssueApi + ", Отображается : " + newCountIssuesGui);
     }
 }
 

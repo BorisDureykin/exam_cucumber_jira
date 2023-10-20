@@ -22,7 +22,7 @@ public class TransitionByStatusesIssueApi {
     public static void transitionByStatuses() {
 
         try {
-            RequestSpecification request =  baseAuthorizationRequest();
+            RequestSpecification request = baseAuthorizationRequest();
 
             String jsonString = new String(Files.readAllBytes(Paths.get("src/test/resources/ifellow_edu_jira/statuses.json")));
 
@@ -57,7 +57,6 @@ public class TransitionByStatusesIssueApi {
         body = body.replace("transitionStatusId", transitionStatusId);
 
         ResponseAllTests.responseGet(request, body, endpoint, "POST", "204", null);
-
     }
 
     @Step("Проверка перевода задачи Id: \"{issueId}\" в статус \"{transitionStatusName}\"")
@@ -73,9 +72,8 @@ public class TransitionByStatusesIssueApi {
 
         String message = "Ожидаемый статус: " + transitionStatusName + " Фактический статус: " + gettingStatusName;
 
-        saveMessage("Сверяем статус задачи с ожидаемым" ,message);
+        saveMessage("Сверяем статус задачи с ожидаемым", message);
 
         assertEquals(transitionStatusName, gettingStatusName);
-
     }
 }

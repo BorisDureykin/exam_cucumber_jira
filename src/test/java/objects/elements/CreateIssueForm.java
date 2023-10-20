@@ -33,12 +33,10 @@ public class CreateIssueForm {
     public static SelenideElement returnIssueKey = $x("//div[contains(text(),'Запрос ')]/a");
 
     public static SelenideElement summaryDescriptionError = $x("//div[@id='summary-description-error']");
-
+    public static SelenideElement iframeInputField = $x("//body[@id='tinymce']/p");
 
     public static SelenideElement iframeInput(String text) {
         return $x("//label[contains(text(),'" + text + "')]//following-sibling::div//iframe");
     }
-
-    public static SelenideElement iframeInputField = $x("//body[@id='tinymce']/p");
 }
 

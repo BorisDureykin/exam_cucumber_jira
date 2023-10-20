@@ -52,7 +52,12 @@
               "format": "uri"
             }
           },
-          "required": ["48x48", "24x24", "16x16", "32x32"]
+          "required": [
+            "48x48",
+            "24x24",
+            "16x16",
+            "32x32"
+          ]
         },
         "displayName": {
           "type": "string"
@@ -61,7 +66,14 @@
           "type": "boolean"
         }
       },
-      "required": ["self", "key", "name", "avatarUrls", "displayName", "active"]
+      "required": [
+        "self",
+        "key",
+        "name",
+        "avatarUrls",
+        "displayName",
+        "active"
+      ]
     },
     "components": {
       "type": "array",
@@ -106,13 +118,20 @@
             "format": "date"
           }
         },
-        "required": ["self", "id", "name", "subtask"],
+        "required": [
+          "self",
+          "id",
+          "name",
+          "subtask"
+        ],
         "additionalProperties": false
       }
     },
     "assigneeType": {
       "type": "string",
-      "enum": ["UNASSIGNED"]
+      "enum": [
+        "UNASSIGNED"
+      ]
     },
     "versions": {
       "type": "array",
@@ -241,6 +260,21 @@
       "type": "boolean"
     }
   },
-  "required": ["expand", "self", "id", "key", "lead", "components", "issueTypes", "assigneeType", "versions", "name", "roles", "avatarUrls", "projectTypeKey", "archived"],
+  "required": [
+    "expand",
+    "self",
+    "id",
+    "key",
+    "lead",
+    "components",
+    "issueTypes",
+    "assigneeType",
+    "versions",
+    "name",
+    "roles",
+    "avatarUrls",
+    "projectTypeKey",
+    "archived"
+  ],
   "additionalProperties": false
 }

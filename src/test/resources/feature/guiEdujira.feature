@@ -35,12 +35,12 @@
     Затем Заходим в проект "TEST"
     Затем Выводим количество задач в проекте "TEST"
     Дано Параметры получения ключа проекта:
-      | nameCoToProject  |  endpoint             | method | statusCode | pathSchema                               |
-      | TEST             | /rest/api/2/project/  | GET    | 200        | ifellow_edu_jira/schemaGetProjectKey.json|
+      | nameCoToProject | endpoint             | method | statusCode | pathSchema                                |
+      | TEST            | /rest/api/2/project/ | GET    | 200        | ifellow_edu_jira/schemaGetProjectKey.json |
     Тогда Получаем ключ продукта
     Дано Параметры получения колмчества задач в проекте:
-      |  endpoint             | method | statusCode | pathSchema                               |
-      | /rest/api/2/search    | GET    | 200        | ifellow_edu_jira/schemaSearch.json       |
+      | endpoint           | method | statusCode | pathSchema                         |
+      | /rest/api/2/search | GET    | 200        | ifellow_edu_jira/schemaSearch.json |
     Тогда Получаем количество задач в проекте API
     Тогда Сравниваем количество задач в проекте "TEST" полученное по API и отображаемое на экране
 

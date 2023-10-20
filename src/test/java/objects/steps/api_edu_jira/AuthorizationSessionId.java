@@ -28,21 +28,9 @@ public class AuthorizationSessionId extends ResponseAllTests {
     private static String method;
     private static String statusCode;
     private static String keyPathSchema;
-    @Дано("Параметры авторизации на сайте:")
-    public void setDataTable(DataTable table) {
-        List<Map<String, String>> parameters = table.asMaps(String.class, String.class);
-        Map<String, String> params = parameters.get(0);
-        keyUrl = params.get("keyUrl");
-        keyLogin = params.get("keyLogin");
-        keyPassword = params.get("keyPassword");
-        endpoint = params.get("endpoint");
-        method = params.get("method");
-        statusCode = params.get("statusCode");
-        keyPathSchema = params.get("keyPathSchema");
-    }
 
     @Тогда("Авторизуемся на сайте")
-    public static void authorizationSessionId () {
+    public static void authorizationSessionId() {
 
         try {
             String login = keyLogin;
@@ -90,5 +78,26 @@ public class AuthorizationSessionId extends ResponseAllTests {
 
             e.printStackTrace();
         }
+    }
+
+    @Дано("Параметры авторизации на сайте:")
+    public void setDataTable(DataTable table) {
+        List<Map<String, String>> parameters = table.asMaps(String.class, String.class);
+
+        Map<String, String> params = parameters.get(0);
+
+        keyUrl = params.get("keyUrl");
+
+        keyLogin = params.get("keyLogin");
+
+        keyPassword = params.get("keyPassword");
+
+        endpoint = params.get("endpoint");
+
+        method = params.get("method");
+
+        statusCode = params.get("statusCode");
+
+        keyPathSchema = params.get("keyPathSchema");
     }
 }

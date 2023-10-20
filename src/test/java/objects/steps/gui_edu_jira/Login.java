@@ -20,13 +20,13 @@ public class Login extends EdujiraIfellowRuLogin {
 
         String login = keyLogin;
 
-        if(Objects.equals(keyLogin, "login")){
+        if (Objects.equals(keyLogin, "login")) {
 
             login = getConfigValue(keyLogin);
         }
-        String password =keyPassword;
+        String password = keyPassword;
 
-        if(Objects.equals(keyPassword, "password")){
+        if (Objects.equals(keyPassword, "password")) {
 
             password = getConfigValue(keyPassword);
         }

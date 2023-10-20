@@ -27,7 +27,7 @@ public class ProfileIn extends EdujiraIfellowRuSecureDashboard {
 
         assertTrueVisible(nameUser, "Не отображается имя пользователя");
 
-        assertEqualUtil(nameUser.getOwnText(), login, "Неверное имя пользователя, ожидаемое значение: "+login);
+        assertEqualUtil(nameUser.getOwnText(), login, "Неверное имя пользователя, ожидаемое значение: " + login);
 
         saveScreenshot("Сверяем имя пользователя, ожидаемое значение:  " + login);
     }

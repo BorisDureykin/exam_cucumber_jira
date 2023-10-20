@@ -16,6 +16,6 @@ public class ButtonCheckVisibilityClick {
 
         element.click();
 
-        saveScreenshot("Дожидаемся отображения кнопки: \""+elementName+"\" и нажимаем на неё");
+        saveScreenshot("Дожидаемся отображения кнопки: \"" + elementName + "\" и нажимаем на неё");
     }
 }

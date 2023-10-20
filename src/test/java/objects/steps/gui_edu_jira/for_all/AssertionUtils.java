@@ -55,12 +55,13 @@ public class AssertionUtils {
             throw e;
         }
     }
+
     @Step("Проверяем на наличие значения : \"{value}\" , в случае отсутствия выводим: \"{message}\"")
     public static void assertNotNullUtil(String value, String message) {
 
         try {
 
-            assertNotNull(value,  message);
+            assertNotNull(value, message);
 
         } catch (AssertionError e) {
 

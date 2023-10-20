@@ -3,171 +3,503 @@
   "title": "Transitions Meta",
   "type": "object",
   "properties": {
-    "expand": { "type": "string" },
-    "id": { "type": "string" },
-    "self": { "type": "string", "format": "uri" },
-    "key": { "type": "string" },
+    "expand": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "self": {
+      "type": "string",
+      "format": "uri"
+    },
+    "key": {
+      "type": "string"
+    },
     "fields": {
       "type": "object",
       "properties": {
         "issuetype": {
           "type": "object",
           "properties": {
-            "self": { "type": "string", "format": "uri" },
-            "id": { "type": "string" },
-            "description": { "type": "string" },
-            "iconUrl": { "type": "string", "format": "uri" },
-            "name": { "type": "string" },
-            "subtask": { "type": "boolean" },
-            "avatarId": { "type": "integer" }
+            "self": {
+              "type": "string",
+              "format": "uri"
+            },
+            "id": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "iconUrl": {
+              "type": "string",
+              "format": "uri"
+            },
+            "name": {
+              "type": "string"
+            },
+            "subtask": {
+              "type": "boolean"
+            },
+            "avatarId": {
+              "type": "integer"
+            }
           },
-          "required": ["self", "id", "description", "iconUrl", "name", "subtask", "avatarId"]
+          "required": [
+            "self",
+            "id",
+            "description",
+            "iconUrl",
+            "name",
+            "subtask",
+            "avatarId"
+          ]
         },
-        "timespent": { "type": ["null", "integer"] },
+        "timespent": {
+          "type": [
+            "null",
+            "integer"
+          ]
+        },
         "project": {
           "type": "object",
           "properties": {
-            "self": { "type": "string", "format": "uri" },
-            "id": { "type": "string" },
-            "key": { "type": "string" },
-            "name": { "type": "string" },
-            "projectTypeKey": { "type": "string" },
+            "self": {
+              "type": "string",
+              "format": "uri"
+            },
+            "id": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "projectTypeKey": {
+              "type": "string"
+            },
             "avatarUrls": {
               "type": "object",
               "properties": {
-                "48x48": { "type": "string", "format": "uri" },
-                "24x24": { "type": "string", "format": "uri" },
-                "16x16": { "type": "string", "format": "uri" },
-                "32x32": { "type": "string", "format": "uri" }
+                "48x48": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "24x24": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "16x16": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "32x32": {
+                  "type": "string",
+                  "format": "uri"
+                }
               },
-              "required": ["48x48", "24x24", "16x16", "32x32"]
+              "required": [
+                "48x48",
+                "24x24",
+                "16x16",
+                "32x32"
+              ]
             }
           },
-          "required": ["self", "id", "key", "name", "projectTypeKey", "avatarUrls"]
-        },
-        "fixVersions": { "type": "array" },
-        "aggregatetimespent": { "type": ["null", "integer"] },
-        "resolution": {
-          "anyOf": [
-            { "type": "null" },
-            { "type": "string" },
-            { "type": "object" }
+          "required": [
+            "self",
+            "id",
+            "key",
+            "name",
+            "projectTypeKey",
+            "avatarUrls"
           ]
         },
-        "customfield_10104": { "type": ["null", "string"] },
-        "customfield_10105": { "type": "string" },
-        "resolutiondate": { "type": ["null", "string", "object"] },
-        "workratio": { "type": "integer" },
-        "lastViewed": { "type": ["null", "string", "object"] },
+        "fixVersions": {
+          "type": "array"
+        },
+        "aggregatetimespent": {
+          "type": [
+            "null",
+            "integer"
+          ]
+        },
+        "resolution": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "customfield_10104": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "customfield_10105": {
+          "type": "string"
+        },
+        "resolutiondate": {
+          "type": [
+            "null",
+            "string",
+            "object"
+          ]
+        },
+        "workratio": {
+          "type": "integer"
+        },
+        "lastViewed": {
+          "type": [
+            "null",
+            "string",
+            "object"
+          ]
+        },
         "watches": {
           "type": "object",
           "properties": {
-            "self": { "type": "string", "format": "uri" },
-            "watchCount": { "type": "integer" },
-            "isWatching": { "type": "boolean" }
+            "self": {
+              "type": "string",
+              "format": "uri"
+            },
+            "watchCount": {
+              "type": "integer"
+            },
+            "isWatching": {
+              "type": "boolean"
+            }
           },
-          "required": ["self", "watchCount", "isWatching"]
+          "required": [
+            "self",
+            "watchCount",
+            "isWatching"
+          ]
         },
-        "created": { "type": "string" },
+        "created": {
+          "type": "string"
+        },
         "priority": {
           "type": "object",
           "properties": {
-            "self": { "type": "string", "format": "uri" },
-            "iconUrl": { "type": "string", "format": "uri" },
-            "name": { "type": "string" },
-            "id": { "type": "string" }
+            "self": {
+              "type": "string",
+              "format": "uri"
+            },
+            "iconUrl": {
+              "type": "string",
+              "format": "uri"
+            },
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            }
           },
-          "required": ["self", "iconUrl", "name", "id"]
+          "required": [
+            "self",
+            "iconUrl",
+            "name",
+            "id"
+          ]
         },
-        "customfield_10100": { "type": ["null", "string"] },
-        "labels": { "type": "array" },
-        "timeestimate": { "type": ["null", "string", "object"] },
-        "aggregatetimeoriginalestimate": { "type": ["null", "string", "object"] },
-        "versions": { "type": "array" },
-        "issuelinks": { "type": "array" },
-        "assignee": { "type": ["null", "string", "object"] },
-        "updated": { "type": "string" },
+        "customfield_10100": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "labels": {
+          "type": "array"
+        },
+        "timeestimate": {
+          "type": [
+            "null",
+            "string",
+            "object"
+          ]
+        },
+        "aggregatetimeoriginalestimate": {
+          "type": [
+            "null",
+            "string",
+            "object"
+          ]
+        },
+        "versions": {
+          "type": "array"
+        },
+        "issuelinks": {
+          "type": "array"
+        },
+        "assignee": {
+          "type": [
+            "null",
+            "string",
+            "object"
+          ]
+        },
+        "updated": {
+          "type": "string"
+        },
         "status": {
           "type": "object",
           "properties": {
-            "self": { "type": "string", "format": "uri" },
-            "description": { "type": "string" },
-            "iconUrl": { "type": "string", "format": "uri" },
-            "name": { "type": "string" },
-            "id": { "type": "string" },
+            "self": {
+              "type": "string",
+              "format": "uri"
+            },
+            "description": {
+              "type": "string"
+            },
+            "iconUrl": {
+              "type": "string",
+              "format": "uri"
+            },
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
             "statusCategory": {
               "type": "object",
               "properties": {
-                "self": { "type": "string", "format": "uri" },
-                "id": { "type": "integer" },
-                "key": { "type": "string" },
-                "colorName": { "type": "string" },
-                "name": { "type": "string" }
+                "self": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "id": {
+                  "type": "integer"
+                },
+                "key": {
+                  "type": "string"
+                },
+                "colorName": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
               },
-              "required": ["self", "id", "key", "colorName", "name"]
+              "required": [
+                "self",
+                "id",
+                "key",
+                "colorName",
+                "name"
+              ]
             }
           },
-          "required": ["self", "description", "iconUrl", "name", "id", "statusCategory"]
+          "required": [
+            "self",
+            "description",
+            "iconUrl",
+            "name",
+            "id",
+            "statusCategory"
+          ]
         },
-        "components": { "type": "array" },
-        "timeoriginalestimate": { "type": ["null", "string", "object"] },
-        "description": { "type": "string" },
-        "timetracking": { "type": "object" },
-        "archiveddate": { "type": ["null", "string", "object"] },
-        "customfield_10203": { "type": ["null", "string", "object"] },
-        "customfield_10204": { "type": ["null", "string", "object"] },
-        "attachment": { "type": "array" },
-        "aggregatetimeestimate": { "type": ["null", "string", "object"] },
-        "summary": { "type": "string" },
+        "components": {
+          "type": "array"
+        },
+        "timeoriginalestimate": {
+          "type": [
+            "null",
+            "string",
+            "object"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "timetracking": {
+          "type": "object"
+        },
+        "archiveddate": {
+          "type": [
+            "null",
+            "string",
+            "object"
+          ]
+        },
+        "customfield_10203": {
+          "type": [
+            "null",
+            "string",
+            "object"
+          ]
+        },
+        "customfield_10204": {
+          "type": [
+            "null",
+            "string",
+            "object"
+          ]
+        },
+        "attachment": {
+          "type": "array"
+        },
+        "aggregatetimeestimate": {
+          "type": [
+            "null",
+            "string",
+            "object"
+          ]
+        },
+        "summary": {
+          "type": "string"
+        },
         "creator": {
           "type": "object",
           "properties": {
-            "self": { "type": "string", "format": "uri" },
-            "name": { "type": "string" },
-            "key": { "type": "string" },
-            "emailAddress": { "type": "string", "format": "email" },
+            "self": {
+              "type": "string",
+              "format": "uri"
+            },
+            "name": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "emailAddress": {
+              "type": "string",
+              "format": "email"
+            },
             "avatarUrls": {
               "type": "object",
               "properties": {
-                "48x48": { "type": "string", "format": "uri" },
-                "24x24": { "type": "string", "format": "uri" },
-                "16x16": { "type": "string", "format": "uri" },
-                "32x32": { "type": "string", "format": "uri" }
+                "48x48": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "24x24": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "16x16": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "32x32": {
+                  "type": "string",
+                  "format": "uri"
+                }
               },
-              "required": ["48x48", "24x24", "16x16", "32x32"]
+              "required": [
+                "48x48",
+                "24x24",
+                "16x16",
+                "32x32"
+              ]
             },
-            "displayName": { "type": "string" },
-            "active": { "type": "boolean" },
-            "timeZone": { "type": "string" }
+            "displayName": {
+              "type": "string"
+            },
+            "active": {
+              "type": "boolean"
+            },
+            "timeZone": {
+              "type": "string"
+            }
           },
-          "required": ["self", "name", "key", "emailAddress", "avatarUrls", "displayName", "active", "timeZone"]
+          "required": [
+            "self",
+            "name",
+            "key",
+            "emailAddress",
+            "avatarUrls",
+            "displayName",
+            "active",
+            "timeZone"
+          ]
         },
-        "subtasks": { "type": "array" },
+        "subtasks": {
+          "type": "array"
+        },
         "reporter": {
           "type": "object",
           "properties": {
-            "self": { "type": "string", "format": "uri" },
-            "name": { "type": "string" },
-            "key": { "type": "string" },
-            "emailAddress": { "type": "string", "format": "email" },
+            "self": {
+              "type": "string",
+              "format": "uri"
+            },
+            "name": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "emailAddress": {
+              "type": "string",
+              "format": "email"
+            },
             "avatarUrls": {
               "type": "object",
               "properties": {
-                "48x48": { "type": "string", "format": "uri" },
-                "24x24": { "type": "string", "format": "uri" },
-                "16x16": { "type": "string", "format": "uri" },
-                "32x32": { "type": "string", "format": "uri" }
+                "48x48": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "24x24": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "16x16": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "32x32": {
+                  "type": "string",
+                  "format": "uri"
+                }
               },
-              "required": ["48x48", "24x24", "16x16", "32x32"]
+              "required": [
+                "48x48",
+                "24x24",
+                "16x16",
+                "32x32"
+              ]
             },
-            "displayName": { "type": "string" },
-            "active": { "type": "boolean" },
-            "timeZone": { "type": "string" }
+            "displayName": {
+              "type": "string"
+            },
+            "active": {
+              "type": "boolean"
+            },
+            "timeZone": {
+              "type": "string"
+            }
           },
-          "required": ["self", "name", "key", "emailAddress", "avatarUrls", "displayName", "active", "timeZone"]
+          "required": [
+            "self",
+            "name",
+            "key",
+            "emailAddress",
+            "avatarUrls",
+            "displayName",
+            "active",
+            "timeZone"
+          ]
         },
         "customfield_10000": {
-          "type": ["null", "string", "object"],
+          "type": [
+            "null",
+            "string",
+            "object"
+          ],
           "properties": {
             "summaryBean": {
               "type": "object",
@@ -181,25 +513,54 @@
                         "overall": {
                           "type": "object",
                           "properties": {
-                            "stateCount": { "type": "integer" },
-                            "state": { "type": "string" },
+                            "stateCount": {
+                              "type": "integer"
+                            },
+                            "state": {
+                              "type": "string"
+                            },
                             "details": {
                               "type": "object",
                               "properties": {
-                                "openCount": { "type": "integer" },
-                                "mergedCount": { "type": "integer" },
-                                "declinedCount": { "type": "integer" },
-                                "total": { "type": "integer" }
+                                "openCount": {
+                                  "type": "integer"
+                                },
+                                "mergedCount": {
+                                  "type": "integer"
+                                },
+                                "declinedCount": {
+                                  "type": "integer"
+                                },
+                                "total": {
+                                  "type": "integer"
+                                }
                               },
-                              "required": ["openCount", "mergedCount", "declinedCount", "total"]
+                              "required": [
+                                "openCount",
+                                "mergedCount",
+                                "declinedCount",
+                                "total"
+                              ]
                             },
-                            "open": { "type": "boolean" }
+                            "open": {
+                              "type": "boolean"
+                            }
                           },
-                          "required": ["stateCount", "state", "details", "open"]
+                          "required": [
+                            "stateCount",
+                            "state",
+                            "details",
+                            "open"
+                          ]
                         },
-                        "byInstanceType": { "type": "object" }
+                        "byInstanceType": {
+                          "type": "object"
+                        }
                       },
-                      "required": ["overall", "byInstanceType"]
+                      "required": [
+                        "overall",
+                        "byInstanceType"
+                      ]
                     },
                     "build": {
                       "type": "object",
@@ -207,18 +568,40 @@
                         "overall": {
                           "type": "object",
                           "properties": {
-                            "failedBuildCount": { "type": "integer" },
-                            "successfulBuildCount": { "type": "integer" },
-                            "unknownBuildCount": { "type": "integer" },
-                            "count": { "type": "integer" },
-                            "lastUpdated": { "type": "null" },
-                            "lastUpdatedTimestamp": { "type": "null" }
+                            "failedBuildCount": {
+                              "type": "integer"
+                            },
+                            "successfulBuildCount": {
+                              "type": "integer"
+                            },
+                            "unknownBuildCount": {
+                              "type": "integer"
+                            },
+                            "count": {
+                              "type": "integer"
+                            },
+                            "lastUpdated": {
+                              "type": "null"
+                            },
+                            "lastUpdatedTimestamp": {
+                              "type": "null"
+                            }
                           },
-                          "required": ["failedBuildCount", "successfulBuildCount", "unknownBuildCount", "count"]
+                          "required": [
+                            "failedBuildCount",
+                            "successfulBuildCount",
+                            "unknownBuildCount",
+                            "count"
+                          ]
                         },
-                        "byInstanceType": { "type": "object" }
+                        "byInstanceType": {
+                          "type": "object"
+                        }
                       },
-                      "required": ["overall", "byInstanceType"]
+                      "required": [
+                        "overall",
+                        "byInstanceType"
+                      ]
                     },
                     "review": {
                       "type": "object",
@@ -226,19 +609,44 @@
                         "overall": {
                           "type": "object",
                           "properties": {
-                            "stateCount": { "type": "integer" },
-                            "state": { "type": "string" },
-                            "dueDate": { "type": "null" },
-                            "overDue": { "type": "boolean" },
-                            "count": { "type": "integer" },
-                            "lastUpdated": { "type": "null" },
-                            "lastUpdatedTimestamp": { "type": "null" }
+                            "stateCount": {
+                              "type": "integer"
+                            },
+                            "state": {
+                              "type": "string"
+                            },
+                            "dueDate": {
+                              "type": "null"
+                            },
+                            "overDue": {
+                              "type": "boolean"
+                            },
+                            "count": {
+                              "type": "integer"
+                            },
+                            "lastUpdated": {
+                              "type": "null"
+                            },
+                            "lastUpdatedTimestamp": {
+                              "type": "null"
+                            }
                           },
-                          "required": ["stateCount", "state", "dueDate", "overDue", "count"]
+                          "required": [
+                            "stateCount",
+                            "state",
+                            "dueDate",
+                            "overDue",
+                            "count"
+                          ]
                         },
-                        "byInstanceType": { "type": "object" }
+                        "byInstanceType": {
+                          "type": "object"
+                        }
                       },
-                      "required": ["overall", "byInstanceType"]
+                      "required": [
+                        "overall",
+                        "byInstanceType"
+                      ]
                     },
                     "deployment-environment": {
                       "type": "object",
@@ -246,18 +654,40 @@
                         "overall": {
                           "type": "object",
                           "properties": {
-                            "topEnvironments": { "type": "array" },
-                            "showProjects": { "type": "boolean" },
-                            "successfulCount": { "type": "integer" },
-                            "count": { "type": "integer" },
-                            "lastUpdated": { "type": "null" },
-                            "lastUpdatedTimestamp": { "type": "null" }
+                            "topEnvironments": {
+                              "type": "array"
+                            },
+                            "showProjects": {
+                              "type": "boolean"
+                            },
+                            "successfulCount": {
+                              "type": "integer"
+                            },
+                            "count": {
+                              "type": "integer"
+                            },
+                            "lastUpdated": {
+                              "type": "null"
+                            },
+                            "lastUpdatedTimestamp": {
+                              "type": "null"
+                            }
                           },
-                          "required": ["topEnvironments", "showProjects", "successfulCount", "count"]
+                          "required": [
+                            "topEnvironments",
+                            "showProjects",
+                            "successfulCount",
+                            "count"
+                          ]
                         },
-                        "byInstanceType": { "type": "object" }
+                        "byInstanceType": {
+                          "type": "object"
+                        }
                       },
-                      "required": ["overall", "byInstanceType"]
+                      "required": [
+                        "overall",
+                        "byInstanceType"
+                      ]
                     },
                     "repository": {
                       "type": "object",
@@ -265,15 +695,28 @@
                         "overall": {
                           "type": "object",
                           "properties": {
-                            "count": { "type": "integer" },
-                            "lastUpdated": { "type": "null" },
-                            "lastUpdatedTimestamp": { "type": "null" }
+                            "count": {
+                              "type": "integer"
+                            },
+                            "lastUpdated": {
+                              "type": "null"
+                            },
+                            "lastUpdatedTimestamp": {
+                              "type": "null"
+                            }
                           },
-                          "required": ["count"]
+                          "required": [
+                            "count"
+                          ]
                         },
-                        "byInstanceType": { "type": "object" }
+                        "byInstanceType": {
+                          "type": "object"
+                        }
                       },
-                      "required": ["overall", "byInstanceType"]
+                      "required": [
+                        "overall",
+                        "byInstanceType"
+                      ]
                     },
                     "branch": {
                       "type": "object",
@@ -281,23 +724,51 @@
                         "overall": {
                           "type": "object",
                           "properties": {
-                            "count": { "type": "integer" },
-                            "lastUpdated": { "type": "null" },
-                            "lastUpdatedTimestamp": { "type": "null" }
+                            "count": {
+                              "type": "integer"
+                            },
+                            "lastUpdated": {
+                              "type": "null"
+                            },
+                            "lastUpdatedTimestamp": {
+                              "type": "null"
+                            }
                           },
-                          "required": ["count"]
+                          "required": [
+                            "count"
+                          ]
                         },
-                        "byInstanceType": { "type": "object" }
+                        "byInstanceType": {
+                          "type": "object"
+                        }
                       },
-                      "required": ["overall", "byInstanceType"]
+                      "required": [
+                        "overall",
+                        "byInstanceType"
+                      ]
                     }
                   },
-                  "required": ["pullrequest", "build", "review", "deployment-environment", "repository", "branch"]
+                  "required": [
+                    "pullrequest",
+                    "build",
+                    "review",
+                    "deployment-environment",
+                    "repository",
+                    "branch"
+                  ]
                 },
-                "errors": { "type": "array" },
-                "configErrors": { "type": "array" }
+                "errors": {
+                  "type": "array"
+                },
+                "configErrors": {
+                  "type": "array"
+                }
               },
-              "required": ["summary", "errors", "configErrors"]
+              "required": [
+                "summary",
+                "errors",
+                "configErrors"
+              ]
             },
             "devSummaryJson": {
               "type": "object",
@@ -305,8 +776,12 @@
                 "cachedValue": {
                   "type": "object",
                   "properties": {
-                    "errors": { "type": "array" },
-                    "configErrors": { "type": "array" },
+                    "errors": {
+                      "type": "array"
+                    },
+                    "configErrors": {
+                      "type": "array"
+                    },
                     "summary": {
                       "type": "object",
                       "properties": {
@@ -316,27 +791,62 @@
                             "overall": {
                               "type": "object",
                               "properties": {
-                                "count": { "type": "integer" },
-                                "lastUpdated": { "type": "null" },
-                                "stateCount": { "type": "integer" },
-                                "state": { "type": "string" },
+                                "count": {
+                                  "type": "integer"
+                                },
+                                "lastUpdated": {
+                                  "type": "null"
+                                },
+                                "stateCount": {
+                                  "type": "integer"
+                                },
+                                "state": {
+                                  "type": "string"
+                                },
                                 "details": {
                                   "type": "object",
                                   "properties": {
-                                    "openCount": { "type": "integer" },
-                                    "mergedCount": { "type": "integer" },
-                                    "declinedCount": { "type": "integer" },
-                                    "total": { "type": "integer" }
+                                    "openCount": {
+                                      "type": "integer"
+                                    },
+                                    "mergedCount": {
+                                      "type": "integer"
+                                    },
+                                    "declinedCount": {
+                                      "type": "integer"
+                                    },
+                                    "total": {
+                                      "type": "integer"
+                                    }
                                   },
-                                  "required": ["openCount", "mergedCount", "declinedCount", "total"]
+                                  "required": [
+                                    "openCount",
+                                    "mergedCount",
+                                    "declinedCount",
+                                    "total"
+                                  ]
                                 },
-                                "open": { "type": "boolean" }
+                                "open": {
+                                  "type": "boolean"
+                                }
                               },
-                              "required": ["count", "lastUpdated", "stateCount", "state", "details", "open"]
+                              "required": [
+                                "count",
+                                "lastUpdated",
+                                "stateCount",
+                                "state",
+                                "details",
+                                "open"
+                              ]
                             },
-                            "byInstanceType": { "type": "object" }
+                            "byInstanceType": {
+                              "type": "object"
+                            }
                           },
-                          "required": ["overall", "byInstanceType"]
+                          "required": [
+                            "overall",
+                            "byInstanceType"
+                          ]
                         },
                         "build": {
                           "type": "object",
@@ -344,18 +854,40 @@
                             "overall": {
                               "type": "object",
                               "properties": {
-                                "failedBuildCount": { "type": "integer" },
-                                "successfulBuildCount": { "type": "integer" },
-                                "unknownBuildCount": { "type": "integer" },
-                                "count": { "type": "integer" },
-                                "lastUpdated": { "type": "null" },
-                                "lastUpdatedTimestamp": { "type": "null" }
+                                "failedBuildCount": {
+                                  "type": "integer"
+                                },
+                                "successfulBuildCount": {
+                                  "type": "integer"
+                                },
+                                "unknownBuildCount": {
+                                  "type": "integer"
+                                },
+                                "count": {
+                                  "type": "integer"
+                                },
+                                "lastUpdated": {
+                                  "type": "null"
+                                },
+                                "lastUpdatedTimestamp": {
+                                  "type": "null"
+                                }
                               },
-                              "required": ["failedBuildCount", "successfulBuildCount", "unknownBuildCount", "count"]
+                              "required": [
+                                "failedBuildCount",
+                                "successfulBuildCount",
+                                "unknownBuildCount",
+                                "count"
+                              ]
                             },
-                            "byInstanceType": { "type": "object" }
+                            "byInstanceType": {
+                              "type": "object"
+                            }
                           },
-                          "required": ["overall", "byInstanceType"]
+                          "required": [
+                            "overall",
+                            "byInstanceType"
+                          ]
                         },
                         "review": {
                           "type": "object",
@@ -363,19 +895,44 @@
                             "overall": {
                               "type": "object",
                               "properties": {
-                                "stateCount": { "type": "integer" },
-                                "state": { "type": "string" },
-                                "dueDate": { "type": "null" },
-                                "overDue": { "type": "boolean" },
-                                "count": { "type": "integer" },
-                                "lastUpdated": { "type": "null" },
-                                "lastUpdatedTimestamp": { "type": "null" }
+                                "stateCount": {
+                                  "type": "integer"
+                                },
+                                "state": {
+                                  "type": "string"
+                                },
+                                "dueDate": {
+                                  "type": "null"
+                                },
+                                "overDue": {
+                                  "type": "boolean"
+                                },
+                                "count": {
+                                  "type": "integer"
+                                },
+                                "lastUpdated": {
+                                  "type": "null"
+                                },
+                                "lastUpdatedTimestamp": {
+                                  "type": "null"
+                                }
                               },
-                              "required": ["stateCount", "state", "dueDate", "overDue", "count"]
+                              "required": [
+                                "stateCount",
+                                "state",
+                                "dueDate",
+                                "overDue",
+                                "count"
+                              ]
                             },
-                            "byInstanceType": { "type": "object" }
+                            "byInstanceType": {
+                              "type": "object"
+                            }
                           },
-                          "required": ["overall", "byInstanceType"]
+                          "required": [
+                            "overall",
+                            "byInstanceType"
+                          ]
                         },
                         "deployment-environment": {
                           "type": "object",
@@ -383,18 +940,40 @@
                             "overall": {
                               "type": "object",
                               "properties": {
-                                "topEnvironments": { "type": "array" },
-                                "showProjects": { "type": "boolean" },
-                                "successfulCount": { "type": "integer" },
-                                "count": { "type": "integer" },
-                                "lastUpdated": { "type": "null" },
-                                "lastUpdatedTimestamp": { "type": "null" }
+                                "topEnvironments": {
+                                  "type": "array"
+                                },
+                                "showProjects": {
+                                  "type": "boolean"
+                                },
+                                "successfulCount": {
+                                  "type": "integer"
+                                },
+                                "count": {
+                                  "type": "integer"
+                                },
+                                "lastUpdated": {
+                                  "type": "null"
+                                },
+                                "lastUpdatedTimestamp": {
+                                  "type": "null"
+                                }
                               },
-                              "required": ["topEnvironments", "showProjects", "successfulCount", "count"]
+                              "required": [
+                                "topEnvironments",
+                                "showProjects",
+                                "successfulCount",
+                                "count"
+                              ]
                             },
-                            "byInstanceType": { "type": "object" }
+                            "byInstanceType": {
+                              "type": "object"
+                            }
                           },
-                          "required": ["overall", "byInstanceType"]
+                          "required": [
+                            "overall",
+                            "byInstanceType"
+                          ]
                         },
                         "repository": {
                           "type": "object",
@@ -402,15 +981,28 @@
                             "overall": {
                               "type": "object",
                               "properties": {
-                                "count": { "type": "integer" },
-                                "lastUpdated": { "type": "null" },
-                                "lastUpdatedTimestamp": { "type": "null" }
+                                "count": {
+                                  "type": "integer"
+                                },
+                                "lastUpdated": {
+                                  "type": "null"
+                                },
+                                "lastUpdatedTimestamp": {
+                                  "type": "null"
+                                }
                               },
-                              "required": ["count"]
+                              "required": [
+                                "count"
+                              ]
                             },
-                            "byInstanceType": { "type": "object" }
+                            "byInstanceType": {
+                              "type": "object"
+                            }
                           },
-                          "required": ["overall", "byInstanceType"]
+                          "required": [
+                            "overall",
+                            "byInstanceType"
+                          ]
                         },
                         "branch": {
                           "type": "object",
@@ -418,78 +1010,188 @@
                             "overall": {
                               "type": "object",
                               "properties": {
-                                "count": { "type": "integer" },
-                                "lastUpdated": { "type": "null" },
-                                "lastUpdatedTimestamp": { "type": "null" }
+                                "count": {
+                                  "type": "integer"
+                                },
+                                "lastUpdated": {
+                                  "type": "null"
+                                },
+                                "lastUpdatedTimestamp": {
+                                  "type": "null"
+                                }
                               },
-                              "required": ["count"]
+                              "required": [
+                                "count"
+                              ]
                             },
-                            "byInstanceType": { "type": "object" }
+                            "byInstanceType": {
+                              "type": "object"
+                            }
                           },
-                          "required": ["overall", "byInstanceType"]
+                          "required": [
+                            "overall",
+                            "byInstanceType"
+                          ]
                         }
                       },
-                      "required": ["summary", "errors", "configErrors"]
+                      "required": [
+                        "summary",
+                        "errors",
+                        "configErrors"
+                      ]
                     },
-                    "isStale": { "type": "boolean" }
+                    "isStale": {
+                      "type": "boolean"
+                    }
                   },
-                  "required": ["errors", "configErrors", "summary", "isStale"]
+                  "required": [
+                    "errors",
+                    "configErrors",
+                    "summary",
+                    "isStale"
+                  ]
                 }
               },
-              "required": ["cachedValue"]
+              "required": [
+                "cachedValue"
+              ]
             }
           },
-          "required": ["summaryBean", "devSummaryJson"]
+          "required": [
+            "summaryBean",
+            "devSummaryJson"
+          ]
         },
         "aggregateprogress": {
           "type": "object",
           "properties": {
-            "progress": { "type": "integer" },
-            "total": { "type": "integer" }
+            "progress": {
+              "type": "integer"
+            },
+            "total": {
+              "type": "integer"
+            }
           },
-          "required": ["progress", "total"]
+          "required": [
+            "progress",
+            "total"
+          ]
         },
-        "customfield_10200": { "type": ["null", "string", "object"] },
-        "customfield_10201": { "type": ["null", "string", "object"] },
-        "customfield_10202": { "type": ["null", "string", "object"] },
-        "environment": { "type": ["null", "string", "object"] },
-        "duedate": { "type": ["null", "string", "object"] },
+        "customfield_10200": {
+          "type": [
+            "null",
+            "string",
+            "object"
+          ]
+        },
+        "customfield_10201": {
+          "type": [
+            "null",
+            "string",
+            "object"
+          ]
+        },
+        "customfield_10202": {
+          "type": [
+            "null",
+            "string",
+            "object"
+          ]
+        },
+        "environment": {
+          "type": [
+            "null",
+            "string",
+            "object"
+          ]
+        },
+        "duedate": {
+          "type": [
+            "null",
+            "string",
+            "object"
+          ]
+        },
         "progress": {
           "type": "object",
           "properties": {
-            "progress": { "type": "integer" },
-            "total": { "type": "integer" }
+            "progress": {
+              "type": "integer"
+            },
+            "total": {
+              "type": "integer"
+            }
           },
-          "required": ["progress", "total"]
+          "required": [
+            "progress",
+            "total"
+          ]
         },
         "comment": {
           "type": "object",
           "properties": {
-            "comments": { "type": "array" },
-            "maxResults": { "type": "integer" },
-            "total": { "type": "integer" },
-            "startAt": { "type": "integer" }
+            "comments": {
+              "type": "array"
+            },
+            "maxResults": {
+              "type": "integer"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "startAt": {
+              "type": "integer"
+            }
           },
-          "required": ["comments", "maxResults", "total", "startAt"]
+          "required": [
+            "comments",
+            "maxResults",
+            "total",
+            "startAt"
+          ]
         },
         "votes": {
           "type": "object",
           "properties": {
-            "self": { "type": "string", "format": "uri" },
-            "votes": { "type": "integer" },
-            "hasVoted": { "type": "boolean" }
+            "self": {
+              "type": "string",
+              "format": "uri"
+            },
+            "votes": {
+              "type": "integer"
+            },
+            "hasVoted": {
+              "type": "boolean"
+            }
           },
-          "required": ["self", "votes", "hasVoted"]
+          "required": [
+            "self",
+            "votes",
+            "hasVoted"
+          ]
         },
         "worklog": {
           "type": "object",
           "properties": {
-            "startAt": { "type": "integer" },
-            "maxResults": { "type": "integer" },
-            "total": { "type": "integer" },
-            "worklogs": { "type": "array" }
+            "startAt": {
+              "type": "integer"
+            },
+            "maxResults": {
+              "type": "integer"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "worklogs": {
+              "type": "array"
+            }
           },
-          "required": ["startAt", "maxResults", "total", "worklogs"]
+          "required": [
+            "startAt",
+            "maxResults",
+            "total",
+            "worklogs"
+          ]
         }
       },
       "required": [
@@ -543,5 +1245,11 @@
       ]
     }
   },
-  "required": ["expand", "id", "self", "key", "fields"]
+  "required": [
+    "expand",
+    "id",
+    "self",
+    "key",
+    "fields"
+  ]
 }

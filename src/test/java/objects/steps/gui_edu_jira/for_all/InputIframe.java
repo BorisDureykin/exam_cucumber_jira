@@ -21,7 +21,7 @@ public class InputIframe {
 
         assertEqualUtil(valueText, iframeInputField.getOwnText(), "В iFrame " + name + " Введено неверное значение.");
 
-        saveScreenshot("Дожидаемся отображения iFrame: " +name+ " и вводим в поле ввода: "+valueText);
+        saveScreenshot("Дожидаемся отображения iFrame: " + name + " и вводим в поле ввода: " + valueText);
 
         switchTo().defaultContent();
     }
