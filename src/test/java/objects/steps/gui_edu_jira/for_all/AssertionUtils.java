@@ -21,7 +21,6 @@ public class AssertionUtils {
             saveScreenshot(message);
 
             throw e;
-//            step("Шаг провален: " + message, Status.FAILED);
         }
     }
 
